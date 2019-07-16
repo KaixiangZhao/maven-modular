@@ -21,6 +21,7 @@
           <version>2.22.1</version>
           <configuration>
               <useSystemClassLoader>false</useSystemClassLoader>
+              <outputDirectory>~/repo/target/${artifactId}</outputDirectory>
           </configuration>
       </plugin>
       </plugins>
