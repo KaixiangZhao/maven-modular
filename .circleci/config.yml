@@ -25,3 +25,5 @@ jobs:
       - run: mvn dependency:go-offline
       # run tests!
       - run: mvn package
+      - store_test_results:
+          path: module1/target
