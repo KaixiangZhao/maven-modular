@@ -26,6 +26,7 @@ jobs:
       # run tests!
       - run: mvn package
       - run:
+          name: cp
           command: mkdir -p test/module1 && cp module1/target/surefire-reports/TEST-io.jitpack.AppTest.xml test/module1 && mkdir -p test/module2 && cp module2/target/surefire-reports/TEST-io.jitpack.AppTest.xml test/module2
           when: on_fail
       - run: 
