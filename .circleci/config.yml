@@ -25,5 +25,7 @@ jobs:
       - run: mvn dependency:go-offline
       # run tests!
       - run: mvn package
+      - run: mkdir -p test/module1 && cp module1/target/surefire-reports/TEST-io.jitpack.AppTest.xml test/module1
+      - run: mkdir -p test/module2 && cp module2/target/surefire-reports/TEST-io.jitpack.AppTest.xml test/module2
       - store_test_results:
-          path: module1/target
+          path: test
